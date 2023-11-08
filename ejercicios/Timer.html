@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center; margin: 0 auto; background-color: Color;">
+        <h3>¿Piensa en un color?</h3>
+        <p>cuando lo tengas pulsa en "continuar"</p>
+        <!--
+            temporizador
+            Sintaxis:
+            nombre de tu variable = setTimeout(nombre de la funcion, tiempo en milisegundos) 
+            ejemplo:
+            Color=setTimeout(azul, 3000);
+        -->
+        <button onclick="setInterval(color, 3000);">
+            continuar
+        </button>
+
+
+
+    </div>
+
+    <script>
+
+        if (color == azul) {
+            document.body.style.backgroundColor = "#00ffff";
+            document.writeln("no pienses en azul");
+        }
+        else if (color == rojo) {
+            document.body.style.backgroundColor = "#ff0000";
+            document.writeln("no pienses en rojo");
+
+        }
+
+        else if (color == verde) {
+            document.body.style.backgroundColor = "#00ff0f";
+            document.writeln("no pienses en verde");
+
+        } else {
+            document.body.style.backgroundColor = "#ffffff";
+            document.writeln("<h3>¿En que color estas pensando?</h3>");
+            document.writeln(" <button>resolver</button>")
+        }
+
+
+        function lila() {
+            ("estas pensando en el lila");
+        }
+    </script>
+</body>
+
+</html>
