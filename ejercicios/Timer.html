@@ -9,48 +9,59 @@
 
 <body>
     <div style="text-align: center; margin: 0 auto; background-color: Color;">
-        <h3>¿Piensa en un color?</h3>
-        <p>cuando lo tengas pulsa en "continuar"</p>
-        <!--
-            temporizador
-            Sintaxis:
-            nombre de tu variable = setTimeout(nombre de la funcion, tiempo en milisegundos) 
-            ejemplo:
-            Color=setTimeout(azul, 3000);
-        -->
-        <button onclick="setInterval(color, 3000);">
-            continuar
-        </button>
+       
+        <p id="color">¿Piensa en un color?
 
+            <br>
 
+            <button onclick="setTimeout(azul, 3000); 
+				setTimeout(rojo, 6000);
+				setTimeout(verde, 9000);
+                setTimeout(pregunta, 12000)">
+                continuar
+            </button>
+        </p>
+        
+        <p id="color2"></p>
 
     </div>
 
     <script>
 
-        if (color == azul) {
+        function azul() {
             document.body.style.backgroundColor = "#00ffff";
-            document.writeln("no pienses en azul");
+            greeting = "no puede ser el azul";
+            console.log("azul")
+            document.getElementById("color").innerHTML = greeting;
         }
-        else if (color == rojo) {
+
+        function rojo() {
             document.body.style.backgroundColor = "#ff0000";
-            document.writeln("no pienses en rojo");
-
+            greeting = "no puede ser el rojo";
+            console.log("rojo")
+            document.getElementById("color").innerHTML = greeting;
         }
 
-        else if (color == verde) {
+        function verde() {
             document.body.style.backgroundColor = "#00ff0f";
-            document.writeln("no pienses en verde");
-
-        } else {
-            document.body.style.backgroundColor = "#ffffff";
-            document.writeln("<h3>¿En que color estas pensando?</h3>");
-            document.writeln(" <button>resolver</button>")
+            greeting = "no puede ser el verde";
+            console.log("verde")
+            document.getElementById("color").innerHTML = greeting;
         }
 
+        function pregunta() {
+            document.body.style.backgroundColor = "#ffffff";
+            greeting =" <button onclick='setTimeout(lila, 3000)'>y el color es...</button>"
+            document.getElementById("color").innerHTML = greeting;
+
+        }
 
         function lila() {
-            ("estas pensando en el lila");
+            document.body.style.backgroundColor = "#d29bfd";
+            greeting = "estas pensando en el lila";
+            console.log("El lila")
+            document.getElementById("color2").innerHTML = greeting;
+
         }
     </script>
 </body>
